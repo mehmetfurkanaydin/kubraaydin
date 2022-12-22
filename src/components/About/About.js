@@ -3,10 +3,12 @@ import React, { useContext } from 'react';
 import './About.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { aboutData } from '../../data/aboutData'
+import { useTranslation } from 'react-i18next';
 
 
 
 function About() {
+    const { t } = useTranslation();
 
     const { theme } = useContext(ThemeContext);
     return (
@@ -18,7 +20,7 @@ function About() {
             </div>
             <div className="about-body">
                 <div className="about-description">
-                    <h2 style={{color: theme.primary}}>{aboutData.title}</h2>
+                    <h2 style={{color: theme.primary}}>{t("NAVBAR_ABOUT")}</h2>
                     <p style={{color:theme.tertiary80}}>{aboutData.description1}<br/><br/>{aboutData.description2}</p>
                 </div>
                 <div className="about-img">

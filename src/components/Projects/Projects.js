@@ -8,6 +8,7 @@ import { HiArrowRight } from "react-icons/hi";
 
 import './Projects.css'
 import SingleProject from './SingleProject/SingleProject';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
 
@@ -42,13 +43,14 @@ function Projects() {
     }));
 
     const classes = useStyles();
+    const { t } = useTranslation();
 
     return (
         <>
             {projectsData.length > 0 && (
                 <div className="projects" id="projects" style={{backgroundColor: theme.secondary}}>
                     <div className="projects--header">
-                        <h1 style={{color: theme.primary}}>Projects</h1>
+                        <h1 style={{color: theme.primary}}>{t("NAVBAR_PROJECTS")}</h1>
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
@@ -66,17 +68,6 @@ function Projects() {
                                 />
                             ))}
                         </div> 
-
-                        {projectsData.length > 3 && (
-                            <div className="projects--viewAll">
-                                <Link to="/projects">
-                                    <button className={classes.viewAllBtn}>
-                                        View All
-                                        <HiArrowRight className={classes.viewArr} />
-                                    </button>
-                                </Link>
-                            </div>
-                        )}
                     </div>
                 </div>
             )}

@@ -6,10 +6,12 @@ import './Skills.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { skillsData } from '../../data/skillsData'
 import { skillsImage } from '../../utils/skillsImage'
+import { useTranslation } from 'react-i18next';
 
 function Skills() {
 
     const { theme } = useContext(ThemeContext);
+    const { t } = useTranslation();
 
     const skillBoxStyle = {
         backgroundColor: theme.secondary,
@@ -19,7 +21,7 @@ function Skills() {
     return (
         <div id ="skills"className="skills" style={{backgroundColor: theme.secondary}}>
             <div className="skillsHeader">
-                <h2 style={{color: theme.primary}}>Skills</h2>
+                <h2 style={{color: theme.primary}}>{t("NAVBAR_SKILLS")}</h2>
             </div>
             <div className="skillsContainer">
                 <div className="skill--scroll">

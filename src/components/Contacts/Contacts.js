@@ -26,6 +26,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
+import { useTranslation } from 'react-i18next';
 
 function Contacts() {
     const [open, setOpen] = useState(false);
@@ -128,6 +129,7 @@ function Contacts() {
     }));
 
     const classes = useStyles();
+    const { t } = useTranslation();
 
     const handleContactForm = (e) => {
         e.preventDefault();
@@ -167,7 +169,7 @@ function Contacts() {
             style={{ backgroundColor: theme.secondary }}
         >
             <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
+                <h1 style={{ color: theme.primary }}>{t("NAVBAR_CONTACT")}</h1>
                 <div className='contacts-body'>
                     {/* <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
