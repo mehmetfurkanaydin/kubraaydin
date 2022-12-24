@@ -1,6 +1,10 @@
 import gcp from '../assets/svg/skills/gcp.svg'
 import html from '../assets/svg/skills/html.svg'
 import photoshop from '../assets/svg/skills/photoshop.svg'
+import autocad from '../assets/svg/skills/autocad.svg'
+import threedsMax from '../assets/svg/skills/3ds-max.svg'
+import sketchUp from '../assets/svg/skills/sketchup.svg'
+import revit from '../assets/svg/skills/revit.svg'
 import illustrator from '../assets/svg/skills/illustrator.svg'
 import docker from '../assets/svg/skills/docker.svg'
 import adobeXd from '../assets/svg/skills/adobe-xd.svg'
@@ -91,6 +95,14 @@ export const skillsImage = (skill) => {
             return illustrator;
         case 'adobe xd':
             return adobeXd;
+        case 'autocad':
+            return autocad;
+        case '3ds max':
+            return threedsMax;
+        case 'sketchup':
+            return sketchUp;
+        case 'revit':
+            return revit;
         case 'after effects':
             return afterEffects;
         case 'css':
