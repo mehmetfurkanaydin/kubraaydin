@@ -124,7 +124,6 @@ function Navbar() {
     },
     drawerLinks: {
       fontFamily: "var(--primaryFont)",
-      width: "50%",
       fontSize: "1.3rem",
       fontWeight: 600,
       [t.breakpoints.down("sm")]: {
@@ -159,7 +158,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar--container">
-        <h1 style={{ color: theme.secondary }}>{shortname(headerData.name)}</h1>
+        <h1 style={{ color: theme.secondary }}>{shortname(headerData.name.split(" ")[0])}</h1>
 
         <div className={classes.languageSelectorWrapper}>
           <Button
