@@ -161,15 +161,24 @@ function Landing() {
               {headerData.resumePdf && (
                 <a
                   href={headerData.resumePdf}
-                  download="resume"
+                  download="kubra_aydin_CV"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Button className={classes.resumeBtn}>Download CV</Button>
+                  <Button className={classes.resumeBtn}>{t('NAVBAR_DOWNLOAD_CV')}</Button>
                 </a>
               )}
+              <a
+                  href={headerData.portfolio}
+                  download="kubra_aydin_Portfolio"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{marginLeft: '15px', marginRight: '15px'}}
+                >
+                  <Button className={classes.resumeBtn}>{t('NAVBAR_DOWNLOAD_PORTFOLIO')}</Button>
+                </a>
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
-                <Button className={classes.contactBtn}>Contact</Button>
+                <Button className={classes.contactBtn}>{t('NAVBAR_CONTACT')}</Button>
               </NavLink>
             </div>
           </div>
