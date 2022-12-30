@@ -294,17 +294,6 @@ function Contacts() {
                                 {contactsData.email}
                             </p>
                         </a>
-                        <a
-                            // href={`tel:${contactsData.phone}`}
-                            className='personal-details'
-                        >
-                            <div className={classes.detailsIcon}>
-                                <FiPhone />
-                            </div>
-                            <p style={{ color: theme.tertiary }}>
-                                {contactsData.phone}
-                            </p>
-                        </a>
                         <div className='personal-details'>
                             <div className={classes.detailsIcon}>
                                 <HiOutlineLocationMarker />
@@ -345,7 +334,7 @@ function Contacts() {
                                     <FaLinkedinIn aria-label='LinkedIn' />
                                 </a>
                             )}
-                            {/* {socialsData.instagram && (
+                            {socialsData.instagram && (
                                 <a
                                     href={socialsData.instagram}
                                     target='_blank'
@@ -354,7 +343,7 @@ function Contacts() {
                                 >
                                     <FaInstagram aria-label='Instagram' />
                                 </a>
-                            )}*/}
+                            )}
                             {socialsData.medium && (
                                 <a
                                     href={socialsData.medium}

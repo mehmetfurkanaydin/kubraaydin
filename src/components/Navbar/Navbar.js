@@ -264,16 +264,6 @@ function Navbar() {
                 </div>
               </NavLink>
             </Fade>
-
-            <Fade left>
-              <NavLink to="/#projects" smooth={true} spy="true" duration={2000}>
-                <div className={classes.drawerItem}>
-                  <FaFolderOpen className={classes.drawerIcon} />
-                  <span className={classes.drawerLinks}>{t("NAVBAR_PROJECTS")}</span>
-                </div>
-              </NavLink>
-            </Fade>
-
             <Fade left>
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
                 <div className={classes.drawerItem}>
