@@ -1,4 +1,4 @@
 export const contactsData = {
-    email: 'kubra@interiarc.com',
-    address: 'İstanbul / Türkiye',
-}
+  email: "kubra@kubraaydin.com",
+  address: "İstanbul / Türkiye",
+};
